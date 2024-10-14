@@ -17,6 +17,11 @@
             <li><a href="#">Service</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
     <div class="bars-animation">
         <div class="bar" style="--i:6;"></div>
@@ -54,6 +59,15 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            const navbar = document.querySelector('.navbar');
+            const toggle = document.querySelector('.toggle');
+    
+            toggle.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+        </script>
     </section>
 </body>
 </html>

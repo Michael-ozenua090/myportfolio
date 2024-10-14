@@ -63,6 +63,82 @@ a{
 }
 
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+      padding: 20px 5%; /* Reduced padding for smaller screens */
+    }
+  
+    .navbar .logo {
+      font-size: 24px; /* Smaller logo font size */
+    }
+  
+    .navbar ul {
+      display: none; /* Hide the navigation menu by default */
+      flex-direction: column; /* Stack menu items vertically */
+      position: absolute;
+      top: 100%; /* Position below the navbar */
+      left: 0;
+      width: 100%;
+      background-color: #1f242d; /* Add a background color */
+      text-align: center;
+      padding: 20px 0;
+    }
+  
+    .navbar ul li {
+      margin: 10px 0; /* Adjust spacing between menu items */
+    }
+  
+    .navbar ul li a {
+      font-size: 18px; /* Smaller font size for menu items */
+    }
+  
+    .navbar .toggle { /* Add a toggle button for mobile menu */
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  
+    .navbar .toggle span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition: .5s;
+    }
+  
+    .navbar .toggle span:nth-child(1) {
+      top: 5px;
+    }
+  
+    .navbar .toggle span:nth-child(2) {
+      top: 14px;
+    }
+  
+    .navbar .toggle span:nth-child(3) {
+      top: 23px;
+    }
+  
+    .navbar.active ul { 
+      display: flex; /* Show the menu when active */
+    }
+  
+    .navbar.active .toggle span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .navbar.active .toggle span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar.active .toggle span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
 .home{
     display: flex;
     align-items: center;
@@ -257,3 +333,50 @@ a{
         transform: translateY(0%);
     }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Remove fixed height */
+      padding: 30px 5% 0; /* Reduced padding */
+      gap: 30px; /* Smaller gap */
+    }
+    .home-info {
+        padding-top: 30px; /* Adjust the value as needed */
+      }
+    .home-info h1 {
+      font-size: 36px; /* Smaller heading */
+      margin-top: 30px;
+    }
+  
+    .home-info h2 {
+      font-size: 24px;
+       /* Smaller subheading */
+    }
+  
+    .home-info p {
+      font-size: 14px; /* Smaller paragraph text */
+    }
+  
+    .home-img .img-box {
+      width: 60vw; /* Adjust image size */
+      height: 60vw;
+    }
+  
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+      width: 300px; /* Adjust border size */
+      height: 300px;
+    }
+  
+    .btn {
+      padding: 8px 20px; /* Smaller button size */
+      font-size: 14px;
+    }
+  
+    .home-info .btn-sci .sci a {
+      font-size: 18px; /* Smaller icons */
+      margin: 0 5px;
+    }
+  }
